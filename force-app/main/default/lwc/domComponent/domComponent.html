@@ -1,0 +1,39 @@
+<template >
+<div >
+<lightning-card title="Account List">
+<div class="slds-m-around_medium">
+    <lightning-button label="click here to see/hide the list of accounts" variant="brand" onclick={clickHandler}></lightning-button>
+</div>
+
+</lightning-card>
+
+<template if:true={isClicked}>
+<lightning-card title="List of all accounts" >
+<ul class="slds-list_dotted">
+<template for:each={accountNames.data} for:item="account">
+<div  key={account.id} class="slds-m-left_medium" >
+    
+        <li>{account.Name}</li>
+        
+        
+
+</div>
+
+
+
+
+
+
+</template>
+
+
+</ul>
+
+
+</lightning-card>
+
+</template>
+
+
+</div>
+</template>

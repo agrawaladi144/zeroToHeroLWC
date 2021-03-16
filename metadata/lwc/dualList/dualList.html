@@ -1,0 +1,51 @@
+<template>
+<lightning-card>
+    <div class="slds-m-around_medium">
+        <lightning-dual-listbox name="players"
+        label="Select Players "
+        source-label="Available"
+        selected-label="Selected"
+        field-level-help="Select your preferred Players"
+        options={options}
+        onchange={handleChange}></lightning-dual-listbox>
+    <div class="slds-box" >
+    <p>Selected players are: {selected}</p>
+    </div>
+    
+
+
+    </div>
+</lightning-card>
+
+
+<template for:each={selected} for:item="player">
+<div key={player} class="slds-m-top_medium">
+<lightning-card>
+<div class="player slds-m-left_medium">
+{player}
+
+
+</div>
+
+
+
+</lightning-card>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</template>
+        
+    
+    
+</template>

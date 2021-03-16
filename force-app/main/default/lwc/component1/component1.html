@@ -1,0 +1,39 @@
+<template>
+    <div>
+<lightning-card title="trial">
+    <div class="slds-m-around_medium">
+<lightning-input label="type here" onchange={handlechange}></lightning-input>
+<div class="slds-m-vertical_medium">
+ my name is {name} and title is {title}
+</div>
+</div>
+</lightning-card>
+
+<lightning-card title="@track">
+    <div class="slds-m-around_medium">
+<lightning-input label="type here" onchange={trackchange}></lightning-input>
+<div class="slds-m-vertical_medium">
+my city is {address.city}
+</div>
+</div>
+</lightning-card>
+
+
+
+<lightning-card title="conditional rendering">
+    <div class="slds-m-around_medium">
+<lightning-input label="click here" onchange={handleclick}></lightning-input>
+<template if:true={isvisibble}>
+<div class="slds-m-vertical_medium">
+    data is here
+
+</div>
+</template>
+</div>
+</lightning-card>
+
+
+
+
+    </div>
+</template>
